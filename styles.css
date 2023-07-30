@@ -1,0 +1,192 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #2a2a2a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculate-btn,
+.clear-btn {
+  flex-basis: 48%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover,
+.clear-btn:hover {
+  background-color: #0056b3;
+}
+
+.calculate-btn:active,
+.clear-btn:active {
+  background-color: #003d80;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #36c94e;
+  color: #ffffff;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.show-result {
+  opacity: 1;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Additional Styling */
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+  input[type="number"],
+  select,
+  .calculate-btn,
+  .clear-btn {
+    padding: 10px;
+  }
+}
+
+/* Currency Options Styling */
+option {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.result.show-result {
+  animation: fadeIn 0.5s ease, slideIn 0.5s ease;
+}
+
+/* Save Button Styling */
+#save-btn {
+  display: none;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+#save-btn:hover {
+  background-color: #45a049;
+}
+
+/* Notice Styling */
+.notice {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Version Information Styling */
+.version-info {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+}
+
+.version-info p {
+  margin: 5px 0;
+}
+
+/* Patch Notes Styling */
+.patch-notes {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+}
+
+.patch-notes h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+}
+
+.patch-notes ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
